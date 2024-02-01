@@ -5,14 +5,21 @@ window.onload = function() {
     x.addEventListener('mouseout', myThirdFunction('Moused out!'));
 }
 
+// the page load, and all functions under called
+
+//below are multiple handlers. So one event can have many handlers.
+
+
+
 function myFunction(msg) {
-    document.getElementById('demo').textContent = msg;
+    return () =>document.getElementById('demo').textContent = msg;
 }
 
+
 function mySecondFunction(msg) {
-    document.getElementById('demo').textContent = msg;
+    return () =>document.getElementById('demo').textContent = msg;
 }
 
 function myThirdFunction(msg) {
-    document.getElementById('demo').textContent = msg;
+    return ()=> document.getElementById('demo').textContent = msg;
 }
